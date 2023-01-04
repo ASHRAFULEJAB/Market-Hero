@@ -4,8 +4,7 @@ import { Link, useLoaderData } from 'react-router-dom'
 const Product = () => {
   const productDetails = useLoaderData()
   console.log(productDetails)
-  const { id, image, title, description, price, rating, category } =
-    productDetails
+  const { image, title, description, price, category } = productDetails
   return (
     <div>
       <div class='max-w-2xl overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 m-6'>
@@ -41,9 +40,7 @@ const Product = () => {
                   src='https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60'
                   alt='Avatar'
                 />
-                {/* {rating.map((rt) => (
-                  <>{rt.rate}</>
-                ))} */}
+
                 <Link
                   to='/'
                   class='mx-2 font-semibold text-gray-700 dark:text-gray-200'

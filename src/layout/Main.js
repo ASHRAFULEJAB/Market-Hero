@@ -6,8 +6,10 @@ import Header from '../shared/Header';
 const Main = () => {
     return (
         <div>
+            {/* Header Part  */}
             <Header />
             <Outlet />
+            {/* Footer part  */}
             <Footer/>
         </div>
     );

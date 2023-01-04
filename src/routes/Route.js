@@ -4,7 +4,7 @@ import Home from '../pages/Home'
 import Login from '../pages/Login'
 import Product from '../pages/Product'
 import SignUp from '../pages/SignUp'
-import PrivateRoute from './PrivateRoute'
+
 
 export const router = createBrowserRouter([
   {

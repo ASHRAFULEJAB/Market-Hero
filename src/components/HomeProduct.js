@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link, useLoaderData } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 const HomeProduct = ({product}) => {
   
   console.log(product)
-  const { id, title, image, price, description } = product
+  const { id, title, image, price } = product
   return (
     <div>
       <div className='card w-96 bg-base-100 shadow-2xl'>

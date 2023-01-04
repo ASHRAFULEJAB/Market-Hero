@@ -6,6 +6,7 @@ const Home = () => {
   const [products, setProducts] = useState([])
   const [searchTilte, setSearchTitle] = useState('')
   const [loading, setLoading] = useState(false)
+  // product data loading all
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
       .then((res) => res.json())
@@ -14,7 +15,7 @@ const Home = () => {
         setLoading(false)
       })
   }, [])
-    
+
   return (
     <div>
       {loading ? (
@@ -37,6 +38,7 @@ const Home = () => {
 
           <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
             {' '}
+            {/* Search Functionality  */}
             {products
               .filter((value) => {
                 if (searchTilte === '') {
@@ -47,13 +49,14 @@ const Home = () => {
                     .includes(searchTilte.toLocaleLowerCase())
                 ) {
                   return value
-                } 
+                }
               })
               .map((product) => (
                 <HomeProduct key={product.id} product={product}></HomeProduct>
               ))}
-                      </div>
-                      
+          </div>
+          {/* Hero Section  */}
+
           <HomePgae />
         </>
       )}
